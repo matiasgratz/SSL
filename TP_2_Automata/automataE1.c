@@ -1,9 +1,9 @@
-// // Automata finito determinista 1.1
+// // Automata finito determinista 1
 #include <string.h>
 #include <stdio.h>
 int nuevaTransicion (char);
- /* tabla de transiciones para todos los posibles estados */
 
+ /* tabla de transiciones para todos los posibles estados */
 static int tablaDeEstado [8][7] =
     { /* TO, T1, T2, T3, T4, T5, T6} */
       /* +-, 0, 17, 89, xX, afAF, Otro} */
@@ -31,7 +31,7 @@ int nuevaTransicion (char nuevoCaracter) {
 
  int main (void) {
    int estadoActual = 0, contadorDecimal = 0, contadorHexadecimal = 0, contadorOctal = 0;
-   char str[80];
+   char str[80],str2[80];
    const char s[2] = "&";
    char *token;
    printf("Ingrese la cadena: \n");
@@ -65,7 +65,7 @@ int nuevaTransicion (char nuevoCaracter) {
    printf("El total de cadenas decimales ingresadas es: %d\n",contadorDecimal);
    printf("El total de cadenas octales ingresadas es: %d\n",contadorOctal);
    printf("El total de cadenas hexadecimales ingresadas es: %d\n",contadorHexadecimal);
-   
+  
    return 0;
 }
 
