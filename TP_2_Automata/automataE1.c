@@ -31,7 +31,7 @@ int nuevaTransicion (char nuevoCaracter) {
 
  int main (void) {
    int estadoActual = 0, contadorDecimal = 0, contadorHexadecimal = 0, contadorOctal = 0;
-   char str[80],str2[80];
+   char str[80];
    const char s[2] = "&";
    char *token;
    printf("Ingrese la cadena: \n");
@@ -40,7 +40,7 @@ int nuevaTransicion (char nuevoCaracter) {
    /* Función: Dividir la cadena str en una serie de tokens usando el delimitador delim . */
    token = strtok(str, s);
 
-   /* Imprime el primer token y obtiene los otros tokens */
+   /* Clasifica los tokens y resetea el token y el estadoActual */
    while( token != NULL ) {
       for(int i=0; i < strlen(token);i++){
          estadoActual = tablaDeEstado[estadoActual][nuevaTransicion(token[i])];
