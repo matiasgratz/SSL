@@ -34,6 +34,7 @@ int nuevaTransicion (char nuevoCaracter) {
    char str[80];
    const char s[2] = "&";
    char *token;
+   
    printf("Ingrese la cadena: \n");
    scanf("%s", &str);
 
@@ -59,9 +60,11 @@ int nuevaTransicion (char nuevoCaracter) {
         contadorOctal++;
      }
      else printf("La cadena %s ingresada es erronea \n",token);
+
      token = strtok(NULL, s);
      estadoActual = 0;
    }
+
    printf("El total de cadenas decimales ingresadas es: %d\n",contadorDecimal);
    printf("El total de cadenas octales ingresadas es: %d\n",contadorOctal);
    printf("El total de cadenas hexadecimales ingresadas es: %d\n",contadorHexadecimal);
