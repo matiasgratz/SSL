@@ -17,7 +17,7 @@ static int tablaDeEstado [3][2] =
 
 /* Funcion que asigna los distintos caracteres a los eventos del automata */
 int nuevaTransicion (char nuevoCaracter) {
-   if ((nuevoCaracter >= '0') || (nuevoCaracter <= '9')) return 0;
+   if ((nuevoCaracter >= '0') && (nuevoCaracter <= '9')) return 0;
    else return 1;
 }
 
@@ -31,6 +31,7 @@ scanf("%s", &str);
  for(int i=0; i < strlen(str);i++){
          estadoActual = tablaDeEstado[estadoActual][nuevaTransicion(str[i])];
       }
+
   if (estadoActual == 1){
         printf("La cadena %s ingresada es decimal \n",str);    
      }
